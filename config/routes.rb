@@ -10,5 +10,7 @@ Rails.application.routes.draw do
    resources :users ,only: [:index, :show, :edit, :update] do
     resources :follows, only: [:create]
     resources :unfollows, only: [:create]
+    resources :followings, only: [:index]
+    resources :followers, only: [:index]
    end
 end
