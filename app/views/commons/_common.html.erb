@@ -31,13 +31,15 @@
         <th>introduction</th>
         <th><%= user.introduction %></th>
         </tr>
+        
+        
         <tr>
-        <th> Followers </th>
+        <th><%= link_to 'Followers' , user_followers_path(user.id) %></th>
         <th><%= user.followers.count %></th>
         </tr>
         
         <tr>
-        <th> Folllowing</th>
+        <th> <%= link_to 'Followings' , user_followings_path(user.id) %></th>
         <th><%= user.followings.count %></th>
         </tr>
       </tbody>
